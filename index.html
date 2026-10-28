@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaeem Akhtar | Cloud & DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Zaeem Akhtar — Cloud & DevOps Engineer specializing in Kubernetes, Terraform, AWS, and GitOps automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">
+        <span class="prompt-symbol">zaeem@infra:~$</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Toolchain</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">GitHub Profile ↗</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Live System Status Bar -->
+    <div class="system-status-bar">
+      <div class="status-group">
+        <div class="status-item">
+          <span class="pulse-dot"></span>
+          <span class="status-label">Edge Status:</span>
+          <span class="status-val">Operational</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">DNS Routing:</span>
+          <span class="status-val">4x Anycast Nodes</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Domain:</span>
+          <span class="status-val">deploywithzaeem.tech</span>
+        </div>
+      </div>
+      <div class="status-item">
+        <span class="status-label">CI/CD Pipeline:</span>
+        <span class="status-val" style="color: var(--accent-emerald);">Passing (GitHub Actions)</span>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Cloud & Platform Engineering</span>
+          <h1>Zaeem Akhtar</h1>
+          <p class="subtitle">Cloud & DevOps Engineer</p>
+          <p class="bio">
+            Architecting reliable, scalable cloud infrastructure and zero-downtime deployment pipelines. Passionate about GitOps, Infrastructure as Code, Kubernetes orchestration, and DevSecOps best practices.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Case Studies ↓</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>⌥ GitHub: zaeemakhtar12</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <span>↗ LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Window Mockup -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">zaeem@cloud-node-01:~</div>
+            <div style="width: 40px;"></div>
+          </div>
+          <div class="terminal-tabs">
+            <button class="term-tab active" data-tab="profile">profile.json</button>
+            <button class="term-tab" data-tab="terraform">terraform-plan</button>
+            <button class="term-tab" data-tab="k8s">kubectl-pods</button>
+            <button class="term-tab" data-tab="pipeline">gh-run</button>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line">
+              <span class="term-prompt">zaeem@infra:~$</span> <span class="term-cmd" id="terminal-cmd">curl -s https://deploywithzaeem.tech/api/profile</span>
+            </div>
+            <pre class="term-output" id="terminal-output">{
+  <span class="json-key">"name"</span>: <span class="json-val">"Zaeem Akhtar"</span>,
+  <span class="json-key">"role"</span>: <span class="json-val">"Cloud & DevOps Engineer"</span>,
+  <span class="json-key">"domain"</span>: <span class="json-val">"deploywithzaeem.tech"</span>,
+  <span class="json-key">"focus"</span>: [<span class="json-val">"Kubernetes"</span>, <span class="json-val">"Terraform"</span>, <span class="json-val">"AWS"</span>, <span class="json-val">"CI/CD"</span>],
+  <span class="json-key">"status"</span>: <span class="json-val">"Available for opportunities"</span>,
+  <span class="json-key">"uptime"</span>: <span class="json-num">99.99</span>
+}</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Toolchain & Skills Matrix -->
+    <section class="skills-section" id="stack">
+      <div class="section-header">
+        <span class="section-tag">Tech Stack & Ecosystem</span>
+        <h2 class="section-title">Core Competencies & Toolchain</h2>
+        <p class="section-desc">Tools and frameworks leveraged to build resilient, automated, and observable cloud environments.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Cloud Infrastructure -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">☁️</div>
+            <div>
+              <h3>Cloud Architecture</h3>
+              <p class="node-sub">Compute, Storage & Networking</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">AWS EKS</span>
+            <span class="tag">VPC & Subnets</span>
+            <span class="tag">RDS PostgreSQL</span>
+            <span class="tag">S3 Bucket Policies</span>
+            <span class="tag">IAM Least-Privilege</span>
+            <span class="tag">CloudWatch</span>
+            <span class="tag">Route 53</span>
+          </div>
+        </div>
+
+        <!-- Containers & Orchestration -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">☸️</div>
+            <div>
+              <h3>Container Orchestration</h3>
+              <p class="node-sub">Microservices & Scaling</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Kubernetes (K8s)</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Helm Charts</span>
+            <span class="tag">Ingress NGINX</span>
+            <span class="tag">HPA / Autoscaling</span>
+            <span class="tag">ConfigMaps & Secrets</span>
+          </div>
+        </div>
+
+        <!-- Infrastructure as Code -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">📐</div>
+            <div>
+              <h3>Infrastructure as Code</h3>
+              <p class="node-sub">Declarative Provisioning</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Terraform</span>
+            <span class="tag">OpenTofu</span>
+            <span class="tag">Terraform Modules</span>
+            <span class="tag">Remote State (S3/DynamoDB)</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Configuration Drift Control</span>
+          </div>
+        </div>
+
+        <!-- CI/CD & GitOps -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🚀</div>
+            <div>
+              <h3>CI/CD & GitOps</h3>
+              <p class="node-sub">Continuous Delivery Pipelines</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">GitLab CI</span>
+            <span class="tag">Automated Testing</span>
+            <span class="tag">Semantic Versioning</span>
+            <span class="tag">Canary Deployments</span>
+          </div>
+        </div>
+
+        <!-- Observability & Reliability -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">📊</div>
+            <div>
+              <h3>Observability & SRE</h3>
+              <p class="node-sub">Metrics, Logs & Alerting</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">Alertmanager</span>
+            <span class="tag">Loki / Promtail</span>
+            <span class="tag">SLO / SLA Tracking</span>
+            <span class="tag">Distributed Tracing</span>
+          </div>
+        </div>
+
+        <!-- DevSecOps & Automation -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🛡️</div>
+            <div>
+              <h3>DevSecOps & Scripting</h3>
+              <p class="node-sub">Shift-Left Security & Automation</p>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Linux (Ubuntu/Debian)</span>
+            <span class="tag">Bash Scripting</span>
+            <span class="tag">Python Automation</span>
+            <span class="tag">Trivy Vulnerability Scanner</span>
+            <span class="tag">Gitleaks</span>
+            <span class="tag">SSL/TLS & Cert-Manager</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Case Studies -->
+    <section class="projects-section" id="architecture">
+      <div class="section-header">
+        <span class="section-tag">Case Studies</span>
+        <h2 class="section-title">End-to-End Infrastructure Architecture</h2>
+        <p class="section-desc">Real-world architectures engineered with a focus on high availability, security, and developer productivity.</p>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Case Study 1 -->
+        <div class="project-card" id="projects">
+          <div class="project-top">
+            <div>
+              <span class="project-category">GitOps & Kubernetes</span>
+              <h3 class="project-title">Multi-Environment GitOps Deployment with ArgoCD & AWS EKS</h3>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Implemented an enterprise GitOps workflow separating application source code from deployment configurations. Changes pushed to the repository trigger automated container builds and automated pull requests into the GitOps repo, where ArgoCD reconciles the cluster state declaratively.
+          </p>
+
+          <!-- Interactive Architecture Diagram -->
+          <div class="arch-diagram">
+            <div class="arch-flow-title">Pipeline Architecture Flow</div>
+            <div class="pipeline-nodes">
+              <div class="node">
+                <div class="node-icon">💻</div>
+                <div class="node-name">Git Push</div>
+                <div class="node-sub">App Code</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">⚙️</div>
+                <div class="node-name">GitHub Actions</div>
+                <div class="node-sub">Test & Build Image</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">📦</div>
+                <div class="node-name">AWS ECR</div>
+                <div class="node-sub">Image Registry</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">🔄</div>
+                <div class="node-name">ArgoCD</div>
+                <div class="node-sub">GitOps Sync</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">☸️</div>
+                <div class="node-name">Amazon EKS</div>
+                <div class="node-sub">Zero Downtime Pods</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact Metrics -->
+          <div class="impact-grid">
+            <div class="impact-box">
+              <div class="impact-label">Lead Time to Deploy</div>
+              <div class="impact-metric">↓ 82% Reduction</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Deployment Downtime</div>
+              <div class="impact-metric">0 Seconds (Rolling)</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Mean Time to Recovery</div>
+              <div class="impact-metric">&lt; 90 Seconds</div>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <div class="skill-tags">
+              <span class="tag">Kubernetes</span>
+              <span class="tag">ArgoCD</span>
+              <span class="tag">Helm</span>
+              <span class="tag">AWS EKS</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="project-btn">View Repository ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <span class="project-category">Infrastructure as Code</span>
+              <h3 class="project-title">Modular Multi-AZ Cloud Architecture via Terraform</h3>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Designed and provisioned a production-ready AWS environment using modular Terraform scripts. Features a multi-AZ VPC with public and private subnets, NAT Gateways, least-privilege IAM roles with OIDC provider for GitHub Actions, and encrypted RDS databases. State is managed centrally with S3 and DynamoDB state locking.
+          </p>
+
+          <!-- Architecture Diagram -->
+          <div class="arch-diagram">
+            <div class="arch-flow-title">Infrastructure Topography</div>
+            <div class="pipeline-nodes">
+              <div class="node">
+                <div class="node-icon">📝</div>
+                <div class="node-name">Terraform HCL</div>
+                <div class="node-sub">Modular Config</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">🔒</div>
+                <div class="node-name">S3 + DynamoDB</div>
+                <div class="node-sub">State Locking</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">🌐</div>
+                <div class="node-name">Multi-AZ VPC</div>
+                <div class="node-sub">Public / Private Subnets</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">🛡️</div>
+                <div class="node-name">IAM & Security</div>
+                <div class="node-sub">Least Privilege</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact Metrics -->
+          <div class="impact-grid">
+            <div class="impact-box">
+              <div class="impact-label">Environment Spin-up</div>
+              <div class="impact-metric">15 Mins (Automated)</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Configuration Drift</div>
+              <div class="impact-metric">0% (Strict IaC)</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Availability SLA</div>
+              <div class="impact-metric">99.95% Target</div>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <div class="skill-tags">
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS VPC</span>
+              <span class="tag">AWS RDS</span>
+              <span class="tag">IAM</span>
+              <span class="tag">Security Groups</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="project-btn">View Repository ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <span class="project-category">DevSecOps & Compliance</span>
+              <h3 class="project-title">Automated Shift-Left DevSecOps Security Pipeline</h3>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            Embedded automated security enforcement directly inside the pull request lifecycle. Every commit runs secret scanning (Gitleaks), static analysis, container base image CVE scanning (Trivy), and Terraform security policy checks (tfsec). Pull requests with Critical or High severity CVEs are blocked automatically.
+          </p>
+
+          <!-- Architecture Diagram -->
+          <div class="arch-diagram">
+            <div class="arch-flow-title">Security Gates Flow</div>
+            <div class="pipeline-nodes">
+              <div class="node">
+                <div class="node-icon">🔍</div>
+                <div class="node-name">Gitleaks</div>
+                <div class="node-sub">Secret Detection</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">🛡️</div>
+                <div class="node-name">Trivy Scan</div>
+                <div class="node-sub">Container CVEs</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">📋</div>
+                <div class="node-name">tfsec</div>
+                <div class="node-sub">IaC Policies</div>
+              </div>
+              <div class="node-arrow">➔</div>
+              <div class="node">
+                <div class="node-icon">✅</div>
+                <div class="node-name">PR Status Check</div>
+                <div class="node-sub">Enforced Policy</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="impact-grid">
+            <div class="impact-box">
+              <div class="impact-label">Production Vulnerabilities</div>
+              <div class="impact-metric">0 High/Crit CVEs</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Secret Leak Incidents</div>
+              <div class="impact-metric">100% Pre-commit Catch</div>
+            </div>
+            <div class="impact-box">
+              <div class="impact-label">Scan Overhead</div>
+              <div class="impact-metric">&lt; 45 Seconds in CI</div>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <div class="skill-tags">
+              <span class="tag">Trivy</span>
+              <span class="tag">Gitleaks</span>
+              <span class="tag">tfsec</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Security Scanning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="project-btn">View Repository ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Engineering Principles / About -->
+    <section class="about-section">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag">Engineering Philosophy</span>
+          <h2 class="section-title">Reliability by Design, Automation by Default</h2>
+          <p>
+            I treat infrastructure as software: version-controlled, automated, and continuously tested. My goal is to eliminate manual operational toil so development teams can ship features with speed and confidence.
+          </p>
+          <p>
+            Whether designing self-healing Kubernetes clusters, implementing cost-effective cloud architectures, or securing container supply chains, I focus on clean engineering practices and measurable business outcomes.
+          </p>
+        </div>
+
+        <div class="principles-list">
+          <div class="principle-item">
+            <div class="principle-num">01</div>
+            <div class="principle-content">
+              <h4>Declarative Everything</h4>
+              <p>No manual click-ops in web consoles. Everything from DNS and VPCs to container deployments is codified and version-controlled.</p>
+            </div>
+          </div>
+
+          <div class="principle-item">
+            <div class="principle-num">02</div>
+            <div class="principle-content">
+              <h4>Shift-Left Security</h4>
+              <p>Security is not an afterthought before a release; it is embedded into every automated commit and pull request check.</p>
+            </div>
+          </div>
+
+          <div class="principle-item">
+            <div class="principle-num">03</div>
+            <div class="principle-content">
+              <h4>Observability Over Assumptions</h4>
+              <p>Systems are continuously monitored with structured logs, metrics, and actionable alerts to detect anomalies before users notice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-card">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build & Deploy Together</h2>
+        <p class="section-desc">
+          Interested in discussing cloud architecture, DevOps pipelines, or potential engineering opportunities? I'm always open to connecting.
+        </p>
+
+        <div class="contact-channels">
+          <a href="https://github.com/zaeemakhtar12" target="_blank" rel="noopener noreferrer" class="channel-btn">
+            <span>⌥ GitHub / zaeemakhtar12</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-btn">
+            <span>↗ Connect on LinkedIn</span>
+          </a>
+        </div>
+
+        <p class="mono" style="font-size: 0.85rem; color: var(--text-muted);">
+          Location: Open to Remote / Hybrid Roles Worldwide
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Zaeem Akhtar. Hosted on GitHub Pages via Custom Anycast DNS.</p>
+      <p class="footer-info">
+        Built with clean HTML5/CSS • Deployed via GitHub Actions CI/CD • Domain: <code>deploywithzaeem.tech</code>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
