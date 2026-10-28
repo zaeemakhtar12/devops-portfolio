@@ -1,6 +1,6 @@
 # Deploy with Zaeem — DevOps & Cloud Portfolio
 
-[![Deploy to GitHub Pages](https://github.com/zaeemakhtar12/githun-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/zaeemakhtar12/githun-portfolio/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/zaeemakhtar12/devops-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/zaeemakhtar12/devops-portfolio/actions/workflows/deploy.yml)
 [![Live Site](https://img.shields.io/badge/Live_Site-deploywithzaeem.tech-06b6d4?style=flat&logo=google-chrome)](https://deploywithzaeem.tech)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
 
@@ -32,8 +32,8 @@ To view and edit the site locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/zaeemakhtar12/githun-portfolio.git
-cd githun-portfolio
+git clone https://github.com/zaeemakhtar12/devops-portfolio.git
+cd devops-portfolio
 
 # Start a lightweight local server (Python)
 python -m http.server 8000
